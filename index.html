@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join the Official Community</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .badge {
+      margin-top: 10px;
+    }
+    .verified {
+      height: 24px;
+      vertical-align: middle;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #1b74e4;
+      border: none;
+      border-radius: 8px;
+      margin: 10px;
+      text-decoration: none;
+    }
+    .countdown {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    @media(max-width: 480px){
+      h1 { font-size: 22px; }
+      .btn { font-size: 14px; padding: 10px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Join Our Verified Channels</h1>
+  <div class="badge">
+    <img src="verified-badge-updated.jpeg" alt="Meta Verified" class="verified">
+    <img src="verified-badge-updated.jpeg" alt="Meta Verified" class="verified">
+    <img src="verified-badge-updated.jpeg" alt="Meta Verified" class="verified">
+  </div>
+
+  <p>We are officially verified on Meta, Google, and Telegram. Join us now and be part of the fastest growing trading network.</p>
+
+  <a class="btn" id="telegramBtn" href="https://t.me/khaking001" target="_blank">Join Telegram</a>
+  <a class="btn" id="whatsappBtn" href="https://chat.whatsapp.com/BdQN6SSEi6SEDhGHWU5syW" target="_blank">Join WhatsApp</a>
+
+  <div class="countdown">Redirecting in <span id="count">10</span> seconds...</div>
+
+  <script>
+    let count = 10;
+    const counter = setInterval(() => {
+      count--;
+      document.getElementById("count").innerText = count;
+      if (count === 5) {
+        window.location.href = "https://t.me/khaking001";
+      }
+      if (count === 0) {
+        window.location.href = "https://chat.whatsapp.com/BdQN6SSEi6SEDhGHWU5syW";
+        clearInterval(counter);
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>
